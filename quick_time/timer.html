@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+  </head>
+  <body>
+  
+	<p id="counterDisplay01"></p>
+	
+	
+	<script>
+	
+	// ----------------------------
+	class Countdown {
+		constructor(startingNumber, element) {
+			this.number = startingNumber;
+			this.initialCount = startingNumber;
+			this.timer = null;
+			this.element = element;
+			this.isPaused = false;
+		}
+		startCountdown() {
+			this.timer = setInterval(() => {
+				if (!this.isPaused) {
+					this.number--;
+					console.log(this.number);
+				}
+				this.displayCountdown();
+				if (this.number === 0) {
+					clearInterval(this.timer);
+					this.element.textContent = "Countdown finished!";
+				}
+			}, 1000);
+		}
+		displayCountdown() {
+			this.element.textContent = this.number;
+		}
+		pause() {
+			this.isPaused = true;
+		}
+		resume() {
+			this.isPaused = false;
+		}
+
+		restart() {
+			console.log("Reached restart()");
+			this.number = this.initialCount;
+			this.isPaused = false;
+			clearInterval(this.timer);
+			this.startCountdown();
+		}
+	}
+	// ----------------------------
+	
+	const counterDisplay01 = document.getElementById('counterDisplay01');
+	
+	const counter01 = new Countdown(31, counterDisplay01);
+	
+	counter01.startCountdown();
+	
+	</script>
+	
+  </body>
+</html>
