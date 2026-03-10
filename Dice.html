@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <title>Pixel art</title>
+    <head>
+        <body style="background-color:#F7E7CE"> </body>
+         <div id='hideMe' class="sticky" style="position: absolute; z-index: 3;"><img src="Assets/Fuck.gif"></div>
+    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+    <style>
+    
+
+    #hideMe {
+        animation: cssAnimation 0s ease-in 5s forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+    }
+    @keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            overflow:hidden;
+        }
+    }
+    @-webkit-keyframes cssAnimation {
+        to {
+            width:0;
+            height:0;
+            visibility:hidden;
+        }
+    }
+        .sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      padding: 5px;
+      border: 2px solid #000000;
+    }
+    </style>
+</html>
+<html>
+    <body>
+        <center>
+            <style>
+              .shadow-fuck {
+                width: 284px;
+              padding: 10px 10px 20px 10px;
+              border: 1px solid #BFBFBF;
+              background-color: #aaaaaa;
+                /* x-cord y-cord  ?dither? */
+                box-shadow: 10px 10px 5px #000000;
+                z-index: -1
+              }
+              a.rotate_right {
+                border: 1px solid;
+              float: left;
+              transform: rotate(7deg);
+              position: absolute;
+              top: 15px;
+              left: 450px;
+              z-index: 1;
+            }
+            </style>
+        </center>
+    <l><a href="index.html" class="shadow-fuck rotate_right"><img src="Assets/Ace.png"></a></l>
+
+    </body>
+</html>

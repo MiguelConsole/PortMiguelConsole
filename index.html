@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<title>PortMiguelConsole</title>
+<head>
+	<div id='loader'style="position:fixed;z-index:3;bottom:3;right:-10px;"><img src="Assets/ezgif.com-animated-gif-maker.gif"></div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Center the loader */
+#loader {
+  animation: cssAnimation 0s ease-in 6s forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+
+}
+
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 0.1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-30px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<style>
+html  {
+  background-image: url("TestBackground.png");
+  background-repeat: no-repeat;
+  background-attachment: absolute;
+  background-size: cover;
+}
+
+.link {
+font: bold 20px Arial;
+text-decoration: none;
+background-color: #EEEEEE;
+color: #333333;
+padding: 2px 6px 2px 6px;
+border-top: 3px solid #CCCCCC;
+border-right: 3px solid #333333;
+border-bottom: 3px solid #333333;
+border-left: 3px solid #CCCCCC;
+} 
+a {
+	text-decoration: none;
+	cursor: pointer
+}
+a:hover {
+	color:red;
+	background-color: #cbefe3c4
+}
+h1 {
+  position:absolute;
+  scale:100%;
+  z-index: 3;
+}
+dick {
+    position: fixed;
+}
+dick a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 15px;
+  display:inline-block;
+}
+ul {
+  display: inline;
+  margin: -1;
+  padding: 0;
+}
+ul li {display: inline-block;}
+ul li:hover {background: #905252;}
+ul li:hover ul {display: block;}
+ul li ul {
+  position: fixed;
+  width: 200px;
+  display: none;
+}
+ul li ul li { 
+  background: #75d47e; 
+  display: block; 
+}
+ul li ul li a {display:block !important;} 
+ul li ul li:hover {background: #666;}
+</style>
+
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+</head>
+<html>
+<div style="display:none;" id="myDiv" class="animate-bottom">
+	<h1 style="right:450px;text-shadow: 2px 2px rgba(237, 147, 57, 0.993);">Welcome</h1>
+	<h1 style="left:420px;top:53px;text-shadow: 2px 2px rgba(237, 69, 57, 0.993);">This is the portfolio of Miguel Flores</h1>
+  
+</div>
+<dick style="left:205px;top:80px;">
+   <ul>
+     <li>
+       <a><img src="Assets/Ace.png" width="40" height="40"></a>
+       <ul>
+         <li><a>Discription</a></li>
+       </ul>
+     </li>
+   </ul>
+  </dick>
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+<audio autoplay loop hidden>
+    <source src="Assets/Pizza.mp3" type="audio/mpeg">
+</audio>
+</html>
+</html>
