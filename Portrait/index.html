@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,62 @@
   <!-- PLEASE NO CHANGES BELOW THIS LINE (UNTIL I SAY SO) -->
   <script language="javascript" type="text/javascript" src="libraries/p5.min.js"></script>
   <script language="javascript" type="text/javascript" src="Portrait.js"></script>
+
   <!-- OK, YOU CAN MAKE CHANGES BELOW THIS LINE AGAIN -->
 
   <style>
+    html {
+      background-color: rgb(179, 176, 172);
+    }
+
     body {
       padding: 0;
       margin: 0;
     }
-    .image-container {
-  width: 600px;
-  height: 600px;
-  border: 1px solid black;
-  margin-bottom: 25px;
-}
 
-.image-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+    .image-container {
+      width: 600px;
+      height: 600px;
+      border: 1px solid black;
+      margin-bottom: 25px;
+    }
+
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+
+    .link {
+      font: bold 20px Arial;
+      text-decoration: none;
+      background-color: #EEEEEE;
+      color: #333333;
+      padding: 2px 6px 2px 6px;
+      border-top: 3px solid #CCCCCC;
+      border-right: 3px solid #333333;
+      border-bottom: 3px solid #333333;
+      border-left: 3px solid #CCCCCC;
+    }
+
+    a {
+      text-decoration: none;
+      cursor: pointer
+    }
+
+    a:hover {
+      color: red;
+      background-color: #cbefe3c4
+    }
   </style>
 </head>
+
 <body>
-<div class="image-container" style="position:absolute;z-index:-1;">
-</div>
+  <div class="image-container" style="position:absolute;z-index:-1;">
+  </div>
+  <a href="draw.html" class="link" style="position:absolute;right:20%;top:30%;">Play around with the horrible drawing tool game<a>
+
 </body>
+
 </html>
